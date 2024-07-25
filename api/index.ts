@@ -33,7 +33,8 @@ app.get('/courses/:id', (req, res) => {
     res.status(200).json(course);
 });
 
-app.get('/ssr', (req, res) => {
+app.get('/', (req, res) => {
+    res.set('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
     const htmlResponse = courses
         .map(course => `<li>${course.id} ${course.title}</li>`)
         .join('');
