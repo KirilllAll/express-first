@@ -8,9 +8,9 @@
   },
   "scripts": {
     "watch": "tsc -w",
-    "dev": "nodemon --inspect ./public/index.js",
+    "dev": "nodemon --inspect ./dist/index.js",
     "build": "tsc",
-    "start": "node public/index.js"
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
