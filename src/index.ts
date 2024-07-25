@@ -2,7 +2,7 @@ import express from 'express';
 import { DB } from './mock';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 let { courses } = DB;
 
 const jsonBodyMiddleware = express.json();
